@@ -10,7 +10,7 @@ object UrlPrefs {
     private const val PREFS_NAME = "rrquiz_prefs"
     private const val KEY_URL = "webview_url"
 
-    const val DEFAULT_URL = "https://alfalearning.sat.co.id/"
+    const val DEFAULT_URL = "http://217.216.146.111:8811/"
 
     fun getUrl(context: Context): String {
         val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
