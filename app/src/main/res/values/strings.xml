@@ -22,4 +22,15 @@
     <string name="bank_cleared">Bank soal dihapus</string>
     <string name="sql_copied">SQL disalin ke clipboard</string>
     <string name="no_file">Tidak ada file yang dipilih</string>
+    <string name="auto_title">Jalankan Otomatis — Demo Pengerjaan</string>
+    <string name="auto_message">App akan membaca soal halaman demi halaman, mencocokkan tiap soal dengan bank soal memakai fuzzy string matching (bukan pencocokan persis — toleran terhadap perbedaan kata atau typo), lalu mengklik jawaban yang cocok dan menandai soal terjawab. Di akhir muncul persentase soal yang ada jawabannya dibanding yang tidak cocok. Kuis tidak di-submit otomatis.</string>
+    <string name="auto_run">Jalankan</string>
+    <string name="auto_cancel">Batal</string>
+    <string name="auto_not_quiz">Halaman ini bukan kuis Stok Akhir</string>
+    <string name="auto_bank_empty">Bank soal masih kosong. Upload file Excel dulu di Settings.</string>
+    <string name="auto_result_title">Hasil Demo Pengerjaan</string>
+    <string name="auto_result_format">Terjawab dari bank soal: %1$d/%2$d (%3$d%%)</string>
+    <string name="auto_result_unmatched">Tidak cocok: No. %1$s</string>
+    <string name="auto_result_all_matched">Semua soal cocok dengan bank soal.</string>
+    <string name="auto_score_format">%1$d%%</string>
 </resources>
