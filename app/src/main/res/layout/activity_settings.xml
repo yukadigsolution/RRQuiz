@@ -128,32 +128,6 @@
                 android:layout_marginTop="8dp"
                 android:stretchColumns="1,2" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/sql_label"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tvSql"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/bg_input"
-                android:padding="12dp"
-                android:textIsSelectable="true"
-                android:textSize="13sp"
-                android:typeface="monospace" />
-
-            <Button
-                android:id="@+id/btnCopySql"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/copy_sql" />
-
             <Button
                 android:id="@+id/btnClearBank"
                 android:layout_width="match_parent"

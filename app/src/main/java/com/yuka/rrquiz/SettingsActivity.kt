@@ -1,8 +1,5 @@
 package com.yuka.rrquiz
 
-import android.content.ClipData
-import android.content.ClipboardManager
-import android.content.Context
 import android.os.Bundle
 import android.view.Gravity
 import android.widget.Button
@@ -20,7 +17,6 @@ class SettingsActivity : AppCompatActivity() {
     private lateinit var urlInput: EditText
     private lateinit var tvBankStatus: TextView
     private lateinit var tableBankPreview: TableLayout
-    private lateinit var tvSql: TextView
     private lateinit var dbHelper: BankSoalDbHelper
 
     private val pickExcelLauncher = registerForActivityResult(
@@ -75,7 +71,6 @@ class SettingsActivity : AppCompatActivity() {
         // --- Bank Soal: upload Excel ---
         tvBankStatus = findViewById(R.id.tvBankStatus)
         tableBankPreview = findViewById(R.id.tableBankPreview)
-        tvSql = findViewById(R.id.tvSql)
 
         findViewById<Button>(R.id.btnPickExcel).setOnClickListener {
             pickExcelLauncher.launch(
@@ -86,13 +81,6 @@ class SettingsActivity : AppCompatActivity() {
                     "text/comma-separated-values"
                 )
             )
-        }
-
-        findViewById<Button>(R.id.btnCopySql).setOnClickListener {
-            val sql = tvSql.text.toString()
-            val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-            clipboard.setPrimaryClip(ClipData.newPlainText("bank_soal.sql", sql))
-            Toast.makeText(this, getString(R.string.sql_copied), Toast.LENGTH_SHORT).show()
         }
 
         findViewById<Button>(R.id.btnClearBank).setOnClickListener {
@@ -109,7 +97,7 @@ class SettingsActivity : AppCompatActivity() {
         super.onDestroy()
     }
 
-    /** Muat ulang status, preview, dan SQL dari isi SQLite saat ini. */
+    /** Muat ulang status dan preview dari isi SQLite saat ini. */
     private fun refreshBankSection(success: Int? = null, failedRows: Int = 0, failedFiles: Int = 0) {
         val rows = dbHelper.getAll()
         tvBankStatus.text = if (success != null) {
@@ -139,8 +127,6 @@ class SettingsActivity : AppCompatActivity() {
                 tableBankPreview.addView(more)
             }
         }
-
-        tvSql.text = dbHelper.toSql()
     }
 
     private fun makePreviewRow(no: String, soal: String, jawaban: String, bold: Boolean): TableRow {

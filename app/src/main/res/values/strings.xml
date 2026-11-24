@@ -13,7 +13,7 @@
     <string name="pick_excel">Pilih File Excel</string>
     <string name="bank_empty">Belum ada bank soal.</string>
     <string name="bank_status">Berhasil: %1$d baris, gagal: %2$d baris</string>
-    <string name="bank_count">Total tersimpan: %1$d baris</string>
+    <string name="bank_count">Total bank soal: %1$d butir</string>
     <string name="sql_label">SQL (SQLite)</string>
     <string name="copy_sql">Salin SQL</string>
     <string name="clear_bank">Hapus Bank Soal</string>
