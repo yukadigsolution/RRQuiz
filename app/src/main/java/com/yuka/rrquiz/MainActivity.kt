@@ -18,6 +18,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         webView = findViewById(R.id.webView)
+        // Debugging WebView aktif supaya DOM halaman bisa di-inspect dari jauh
+        // (Chrome DevTools via ADB). Matikan lagi sebelum rilis final.
+        WebView.setWebContentsDebuggingEnabled(true)
         setupWebView()
 
         findViewById<ImageButton>(R.id.btnSettings).setOnClickListener {
