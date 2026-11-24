@@ -42,4 +42,6 @@ android {
 dependencies {
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
+    // Parse file Excel (.xlsx/.xls) untuk import bank soal di Settings.
+    implementation("org.apache.poi:poi-ooxml:5.2.5")
 }
