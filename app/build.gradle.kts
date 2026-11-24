@@ -9,7 +9,8 @@ android {
 
     defaultConfig {
         applicationId = "com.yuka.rrquiz"
-        minSdk = 24
+        // minSdk 26: Apache POI 5.2.5 butuh MethodHandle (Android O / API 26).
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
