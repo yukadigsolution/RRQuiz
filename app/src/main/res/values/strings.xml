@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RRQuiz</string>
+    <string name="settings_title">Settings</string>
+    <string name="back">Kembali</string>
+    <string name="settings_url_label">URL WebView</string>
+    <string name="settings_url_hint_text">URL ini yang dimuat di WebView saat app dibuka. Boleh tanpa https://, nanti ditambahkan otomatis.</string>
+    <string name="settings_url_hint">https://alfalearning.sat.co.id/</string>
+    <string name="save">Simpan</string>
+    <string name="reset_default">Reset ke Default</string>
+</resources>
